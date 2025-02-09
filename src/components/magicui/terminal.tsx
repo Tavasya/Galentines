@@ -93,10 +93,30 @@ export const TypingAnimation = ({
 
 interface TerminalProps {
   children: React.ReactNode;
+  onEnter?: () => void;
   className?: string;
 }
 
-export const Terminal = ({ children, className }: TerminalProps) => {
+export const Terminal = ({ children, onEnter, className }: TerminalProps) => {
+
+  useEffect(() => {
+    if (!onEnter) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Enter") {
+        onEnter();
+      }
+    };
+
+    // Attach a global keydown listener
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Clean up the event listener when the component unmounts or onEnter changes
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onEnter]);
+  
   return (
     <div
       className={cn(
