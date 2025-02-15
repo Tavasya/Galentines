@@ -94,7 +94,7 @@ export default function Home() {
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel className="font-sans">Close</AlertDialogCancel>
-              <AlertDialogAction className="font-sans" onClick={() => openNewDialog(
+              <AlertDialogAction className="font-sans text-[#ffc5e6]" onClick={() => openNewDialog(
                 "But are you like sure sure??", 
                 "Remember the cute bear 🐻", 
                 "I hate bears", 

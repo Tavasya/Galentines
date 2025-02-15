@@ -31,8 +31,8 @@ export default function Yes() {
         {date && (
 
           <Link href="/dateSetup">
-            <Button className="">
-              <PawPrint/>
+            <Button className="bg-[#1C1018]">
+              <PawPrint color="#FAB2EA"/>
             </Button>
           </Link>
         )}
