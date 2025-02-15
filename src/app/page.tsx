@@ -87,7 +87,7 @@ export default function Home() {
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle className="font-sans tracking-wide text-3xl">Are you sure you don't want me?</AlertDialogTitle>
+              <AlertDialogTitle className="font-sans tracking-wide text-3xl">Are you sure you don&apos;t want me?</AlertDialogTitle>
               <AlertDialogDescription className="font-sans">
                 But are you sureeeeeeeeeeeee?
               </AlertDialogDescription>
